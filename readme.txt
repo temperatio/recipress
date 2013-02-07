@@ -79,7 +79,7 @@ See our [Documentation](http://recipress.com/docs) for more information.
 
 == Changelog ==
 
-= 1.9.5 (---) =
+= 1.9.5 (February 7, 2013) =
 * fixed a few missing text strings for localization
 * major code cleanup for things like whitespace
 * adding php docs for major functions
