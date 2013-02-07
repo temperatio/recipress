@@ -1,0 +1,27 @@
+
+
+/*
+ * -----------------------------
+ * Icons
+ * ----------------------------- 
+ */
+ 
+#icon-recipress_options,
+.taxonomy-ingredient #icon-edit-tags,
+.taxonomy-cuisine #icon-edit-tags,
+.taxonomy-course #icon-edit-tags,
+.taxonomy-skill_level #icon-edit-tags {
+	background:url(../img/icon.png) no-repeat -4px -5px;
+}
+
+#toplevel_page_recipress_options .wp-menu-image img { display:none; }
+#toplevel_page_recipress_options .wp-menu-image a,
+#adminmenu #toplevel_page_recipress_options .wp-menu-image {
+	background:url(../img/icon.png) no-repeat 0 -48px;
+}
+#toplevel_page_recipress_options:hover .wp-menu-image a,
+#toplevel_page_recipress_options.wp-has-current-submenu .wp-menu-image a,
+#adminmenu #toplevel_page_recipress_options:hover .wp-menu-image,
+#adminmenu #toplevel_page_recipress_options.wp-has-current-submenu .wp-menu-image {
+	background-position:0 -88px;
+}

@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
-		
+	
 .recipress-clear { 
 	clear:both !important;
 	height:0 !important;
@@ -23,13 +22,12 @@
 	margin:0;
 	padding:10px 20px;
 	border-top:1px solid rgba(255,255,255,.5);
-	font:14px/30px Ubuntu, sans-serif;
 	color:#555;
 }
 
 #hasRecipe_box {
 	margin:0 0 20px !important;
-	font:bold 18px/30px Ubuntu, sans-serif !important;
+	font:bold 18px/30px sans-serif !important;
 }
 
 #hasRecipe_box input {
@@ -59,7 +57,7 @@
 #recipress .description,
 #recipress_options .description {
 	color:#777;
-	font-family:Ubuntu, sans-serif;
+	font-family:sans-serif;
 	display:inline-block;
 	vertical-align:top;
 	line-height:30px;
@@ -88,7 +86,7 @@
 	box-shadow:inset 0 2px 2px rgba(0,0,0,.1);
 	padding:5px;
 	height:30px;
-	font:12px Ubuntu, sans-serif;
+	font:12px sans-serif;
 	color:#666;
 	margin:0;
 }
@@ -160,7 +158,7 @@
 	background-image: -ms-linear-gradient(bottom,#464646,#6a6a6a);
 	background-image: -moz-linear-gradient(bottom,#464646,#6a6a6a);
 	background-image: -o-linear-gradient(bottom,#464646,#6a6a6a);
-	background-image: -webkit-gradient(linear,left bottom,left top,from(#464646),to(#6a6a6a));
+	background-image: -webkit-gradient(linear,left bottom,left top,from(#464646),to(#6a6a6a) );
 	background-image: -webkit-linear-gradient(bottom,#464646,#6a6a6a);
 	background-image: linear-gradient(bottom,#464646,#6a6a6a);
 	-webkit-box-shadow:0 1px 0 rgba(0,0,0,.15);
@@ -258,6 +256,11 @@
 	cursor:move;
 }
 
+#recipress .tr:first-child .sort {
+	height:0;
+	background:none;
+}
+
 .ingredient_add, 
 .ingredient_remove,
 .instruction_add, 
@@ -325,6 +328,12 @@
 	margin-right:15px;
 }
 
+#recipress_options .image_radio label .description {
+	display:block;
+	line-height:10px;
+	padding-bottom:5px;
+}
+
 #recipress_options .image_radio input {
 	display:none;
 }
@@ -348,27 +357,4 @@
 
 #recipress_options fieldset label {
 	line-height:30px;
-}
-
-/*
- * -----------------------------
- * Icons
- * ----------------------------- 
- */
- 
-#icon-recipress_options,
-.taxonomy-ingredient #icon-edit-tags,
-.taxonomy-cuisine #icon-edit-tags,
-.taxonomy-course #icon-edit-tags,
-.taxonomy-skill_level #icon-edit-tags {
-	background:url(../img/icon.png) no-repeat -4px -5px;
-}
-
-#toplevel_page_recipress_options .wp-menu-image img { display:none; }
-#toplevel_page_recipress_options .wp-menu-image a {
-	background:url(../img/icon.png) no-repeat 0 -48px;
-}
-#toplevel_page_recipress_options:hover .wp-menu-image a,
-#toplevel_page_recipress_options.wp-has-current-submenu .wp-menu-image a {
-	background-position:0 -88px;
 }

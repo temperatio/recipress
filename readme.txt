@@ -2,14 +2,16 @@
 Contributors: tammyhart
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=tammyhartdesigns%40gmail%2ecom&item_name=Recipe%20Box%20Plugin%20Latte%20Fund&no_shipping=0&no_note=1&tax=0&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8
 Tags: recipe, hRecipe, ingredients, cuisine, course, skill level, taxonomy, widget
-Requires at least: 2.9
-Tested up to: 3.4
-Stable tag: 1.9.4
+Requires at least: 3.5
+Tested up to: 3.5.1
+Stable tag: 1.9.5
 
 
 == Description ==
 
 Create recipes in your posts with a clean interface and layout that are easy to organize.
+
+NOW uses the new WordPress 3.5 media uploader for images!
 
 [youtube http://www.youtube.com/watch?v=3ShvmQdYYOk]
 
@@ -35,6 +37,7 @@ Create recipes in your posts with a clean interface and layout that are easy to 
 * Slovenian
 * Hungarian
 * Italian
+* Swedish
 
 == Installation ==
 
@@ -56,10 +59,10 @@ See our [Documentation](http://recipress.com/docs) for more information.
 **A:** Yes! You can find the management pages in the ReciPress menu. They work just like post tags and categories.
 
 = Q: Can I output ReciPress term lists without using a widget? =
-**A:** Yes! Use the template tag `recipress_terms($taxonomy, $args)`. The `$args` variable accepts the same attributs as [`get_terms()`](http://codex.wordpress.org/Function_Reference/get_terms). **Note:** This only supports a list output, not a cloud.
+**A:** Yes! Use the template tag `recipress_terms( $taxonomy, $args)`. The `$args` variable accepts the same attributs as [`get_terms()`](http://codex.wordpress.org/Function_Reference/get_terms). **Note:** This only supports a list output, not a cloud.
 
 = Q: Can I output recent Recipes without using a widget? =
-**A:** Yes! Use the template tag `recipress_recent($num , $image)`. 
+**A:** Yes! Use the template tag `recipress_recent( $num , $image)`. 
 * `$num` should be set to the number of posts you want to output and is set to 5 if ommitted.
 * `$image` should be set for displaying an image(1) thumbnail in the list or not(0) ans is set to 1 by default.
 
@@ -75,6 +78,25 @@ See our [Documentation](http://recipress.com/docs) for more information.
 5. ReciPress Options
 
 == Changelog ==
+
+= 1.9.5 (---) =
+* fixed a few missing text strings for localization
+* major code cleanup for things like whitespace
+* adding php docs for major functions
+* changed the ingredients selection to "chosen" select box
+* improved checks and balances by creating settings defaults function
+* depcrecated recipress_post_type() in favor of recipress_options( 'post_type' )
+* depcrecated recipress_use_taxonomies() in favor of recipress_options( 'taxonomies' )
+* deprecated recipress_theme() in favor of recipress_options( 'theme' )
+* added option to "unlink" ingredients
+* changed recipress_time() to accept iso format as boolean
+* updated icon.css for 3.5
+* improved repeatable fields by creating empty array, rather than repeating code
+* added functions for properly sanitizing options and meta
+* moved html output for options and meta box fields into it's own, cleaner, easier to use function
+* removed use of Google font in admin areas
+* fixed recent recipes widget to support custom post type
+* changed media uploader from old thickbox method to new media manager (3.5 now required)
 
 = 1.9.4 (June 26, 2012) =
 * changed "Upload Image" to a more suitable "Add Image"
