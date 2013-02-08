@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=tammy
 Tags: recipe, hRecipe, ingredients, cuisine, course, skill level, taxonomy, widget
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.9.5
+Stable tag: 1.9.6
 
 
 == Description ==
@@ -78,6 +78,9 @@ See our [Documentation](http://recipress.com/docs) for more information.
 5. ReciPress Options
 
 == Changelog ==
+
+= 1.9.6 (February 8, 2013) =
+* fixed output of ingredient selection
 
 = 1.9.5 (February 7, 2013) =
 * fixed a few missing text strings for localization
