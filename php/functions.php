@@ -561,8 +561,10 @@ function recipress_field( $field, $meta = null, $option = false, $setting = null
 				echo '<li class="td cell-ingredient"><select data-placeholder="Select One" name="' . esc_attr( $name ) . '[' . $i . '][ingredient]" id="ingredient_' . $i . '" class="chosen ingredient">
 						<option value="">Select One</option>';
 				$ingredients = get_terms( 'ingredient', 'get=all' );
-				foreach ( $ingredients as $ingredient )
-						echo '<option value="' . $ingredient->slug . '"' . selected( $row['ingredient'], $ingredient->slug, false ) . '>' . $ingredient->name . '</option>'; 
+				foreach ( $ingredients as $ingredient ) {
+						echo '<option value="' . $ingredient->slug . '"' . selected( $ingredient->name, $row['ingredient'], false ) . '>' . $ingredient->name . '</option>'; 
+						echo '<pre>'; print_r( $ingredient ); echo '</pre>';
+				}
 				echo '</select></li>';
 				// continue tr items
 				echo '<li class="td cell-notes"><input type="text" name="' . esc_attr( $name ) . '[' . $i . '][notes]" id="ingredient_notes_' . $i . '" value="' . $row['notes'] . '" size="30" placeholder="' . __( 'e.g., chopped, fresh, etc.', 'recipress' ) . '" /></li>
